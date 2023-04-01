@@ -91,12 +91,6 @@ const App = () => {
     }
   }, [canGoBack]);
 
-  const onRefresh = useCallback(() => {
-    setRefreshing(true);
-    webViewRef.current?.reload();
-    setRefreshing(false);
-  }, []);
-
   const webViewRef = React.useRef<WebView | null>(null);
 
   React.useEffect(() => {
@@ -113,6 +107,12 @@ const App = () => {
       setRefreshing(false); // yukarı çıkılacak sayfaya gelindiğinde yenilemeyi durdur
     }
   };
+
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    webViewRef.current?.reload();
+    setRefreshing(false);
+  }, []);
 
   const handleWebViewMessage = (event: any) => {
     console.log(event.nativeEvent.data);
