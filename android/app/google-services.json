@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "19296481374",
+    "project_id": "voiceofmarkets-6e0d6",
+    "storage_bucket": "voiceofmarkets-6e0d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19296481374:android:ca0fa84c2b85fbec8a04cf",
+        "android_client_info": {
+          "package_name": "com.voiceofmarkets"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "19296481374-g1ut7j4vqtshh2jeo0nf1nfkbf8o6itu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5gxFpyhlADDGyBg3AlEDFCSrmY1TXevk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "19296481374-g1ut7j4vqtshh2jeo0nf1nfkbf8o6itu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

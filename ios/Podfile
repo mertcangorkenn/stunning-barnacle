@@ -23,6 +23,11 @@ end
 
 target 'VoiceOfMarkets' do
   config = use_native_modules!
+  pod 'Firebase'
+  pod 'Firebase/Messaging'
+  pod 'FirebaseAnalytics'
+  pod 'Firebase/Core'
+  pod 'FirebaseCoreInternal'
 
   # Flags change depending on the env values.
   flags = get_default_flags()
