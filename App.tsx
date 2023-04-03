@@ -114,15 +114,26 @@ const App = () => {
     setRefreshing(false);
   }, []);
 
+  const handleScroll = (event: any) => {
+    const {y} = event.nativeEvent.contentOffset;
+    setScrollPosition(y);
+  };
+
   const handleWebViewMessage = (event: any) => {
     console.log(event.nativeEvent.data);
     // handle notification here
   };
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+
   return (
     <ScrollView
       refreshControl={
-        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        <RefreshControl
+          refreshing={refreshing}
+          onRefresh={onRefresh}
+          enabled={scrollPosition <= 0}
+        />
       }
       contentContainerStyle={{flexGrow: 1}}>
       <WebView
@@ -135,6 +146,7 @@ const App = () => {
         onNavigationStateChange={handleNavigationStateChange}
         originWhitelist={['*']}
         allowsInlineMediaPlayback={true}
+        onScroll={handleScroll}
         allowsFullscreenVideo={true}
         mediaPlaybackRequiresUserAction={false}
         javaScriptEnabled={true}
