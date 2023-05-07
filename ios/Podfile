@@ -23,6 +23,8 @@ end
 
 target 'VoiceOfMarkets' do
   config = use_native_modules!
+  use_frameworks!
+  use_modular_headers!
   pod 'Firebase'
   pod 'Firebase/Messaging'
   pod 'FirebaseAnalytics'

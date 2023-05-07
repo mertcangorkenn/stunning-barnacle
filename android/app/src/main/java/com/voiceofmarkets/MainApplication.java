@@ -1,4 +1,4 @@
-package com.voiceofmarkets;
+package com.anlikfonapp;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
@@ -15,7 +15,7 @@ public class MainApplication extends Application implements ReactApplication {
   private final ReactNativeHost mReactNativeHost =
       new DefaultReactNativeHost(this) {
         protected String getPackageName() {
-          return "com.voiceofmarkets"; 
+          return "com.anlikfonapp"; 
         }
          protected String getMainComponentName() {
           return "VoiceOfMarkets";

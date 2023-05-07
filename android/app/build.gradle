@@ -93,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.voiceofmarkets"
+    namespace "com.anlikfonapp"
     defaultConfig {
-        applicationId "com.voiceofmarkets"
+        applicationId "com.anlikfonapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -112,10 +112,10 @@ android {
     }
     signingConfigs {
         debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
+            storeFile file('anlikfon.keystore')
+            storePassword 'mb5256A_'
+            keyAlias 'anlikfon'
+            keyPassword 'mb5256A_'
         }
     }
     buildTypes {

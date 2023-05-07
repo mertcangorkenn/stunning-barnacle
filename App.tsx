@@ -5,6 +5,7 @@ import {
   RefreshControl,
   Alert,
   PermissionsAndroid,
+  View,
 } from 'react-native';
 import {WebView} from 'react-native-webview';
 import messaging, {
@@ -50,16 +51,16 @@ const App = () => {
     });
   };
 
-  messaging().setBackgroundMessageHandler(async remoteMessage => {
-    console.log('Message handled in the background!', remoteMessage);
+  messaging().setBackgroundMessageHandler(async _remoteMessage => {
+    console.log('Message handled in the background!');
   });
 
-  messaging().onMessage(async remoteMessage => {
-    console.log('Foregorund Message!', remoteMessage);
+  messaging().onMessage(async _remoteMessage => {
+    console.log('Foregorund Message!');
   });
 
-  messaging().onNotificationOpenedApp(remoteMessage => {
-    console.log('Notification caused app to open', remoteMessage);
+  messaging().onNotificationOpenedApp(_remoteMessage => {
+    console.log('Notification caused app to open');
   });
 
   const [canGoBack, setCanGoBack] = useState(false);
@@ -103,7 +104,7 @@ const App = () => {
 
   const handleNavigationStateChange = (navState: any) => {
     setCanGoBack(navState.canGoBack);
-    if (navState.url === 'https://voiceof.markets/') {
+    if (navState.url === 'https://anlikfon.com/') {
       setRefreshing(false); // yukarı çıkılacak sayfaya gelindiğinde yenilemeyi durdur
     }
   };
@@ -141,7 +142,7 @@ const App = () => {
         userAgent={
           'Mozilla/5.0 (Linux; Android 11; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36'
         }
-        source={{uri: 'https://voiceof.markets/'}}
+        source={{uri: 'https://anlikfon.com/'}}
         ref={webViewRef}
         onNavigationStateChange={handleNavigationStateChange}
         originWhitelist={['*']}
